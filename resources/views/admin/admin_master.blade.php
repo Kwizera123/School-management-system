@@ -66,8 +66,8 @@
                     var link = $(this).attr('href');
 
                     Swal.fire({
-                        title: "Are you sure you want delete this ?",
-                        text: "You won't be able to revert this!",
+                        title: "Are you sure you want delete this Data ?",
+                        text: "You won't be able to revert it!",
                         icon: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#3085d6",

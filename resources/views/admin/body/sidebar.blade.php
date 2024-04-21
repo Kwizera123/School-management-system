@@ -107,6 +107,25 @@
             </li>
 
 
+            <li class="treeview {{ $prefix == '/employees' ? 'active' : '' }}">
+                <a href="#">
+                    <i data-feather="mail"></i> <span>Employee Management</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('employees.registration.view') }}"><i class="ti-more"></i>Employee Registration</a></li>
+                    <li><a href="{{ route('employee.salary.view') }}"><i class="ti-more"></i>Employee Salary</a></li>
+                   <li><a href="{{ route('employee.leave.view') }}"><i class="ti-more"></i>Employee Leave</a></li>
+
+                 {{--     <li><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Monthly Fee</a></li>
+                    <li><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Exam Fee</a></li> --}}
+
+                </ul>
+            </li>
+
+
 
             <li class="header nav-small-cap">User Interface</li>
 

@@ -27,6 +27,7 @@ class RegistrationFeeController extends Controller
     }
 
     public function RegFeeClassData(Request $request){
+        
         $year_id = $request->year_id;
         $class_id = $request->class_id;
         if ($year_id !='') {
@@ -78,6 +79,7 @@ class RegistrationFeeController extends Controller
         $class_id = $request->class_id;
 
         $allStudent['details'] = AssignStudent::with(['student','discount'])->where('student_id',$student_id)->where('class_id',$class_id)->first();
+        
         $pdf = PDF::loadView('backend.student.registration_fee.registration_fee_pdf', $allStudent);
         $pdf->SetProtection(['copy', 'print'], '', 'pass');
         return $pdf->stream('document.pdf');

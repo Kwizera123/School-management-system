@@ -60,41 +60,45 @@
 
 
 <table id="customers">
+
   <tr>
     <th width="10%">Sl No</th>
     <th width="45%">Employee Details</th>
     <th width="45%">Employee Data</th>
   </tr>
-  <tr>
-    <td>1</td>
-    <td><b>Employee Name</b></td>
-    <td>{{ $details['0']['user']['name']}}</td>
-  </tr>
 
-  <tr>
-    <td>2</td>
-    <td><b>Basic Salary</b></td>
-    <td>{{ $details['0']['user']['salary']}}</td>
-  </tr>
-
-  <tr>
-    <td>3</td>
-    <td><b>Total Absent for This Month</b></td>
-    <td>{{ $absentcount}}</td>
-  </tr>
-
-  <tr>
-    <td>4</td>
-    <td><b>Month</b></td>
-    <td>{{ date('M Y',strtotime($details['0']->date)) }}<td>
-  </tr>
-
-  <tr>
-    <td>5</td>
-    <td><b>Salary This Month</b></td>
-    <td>{{ $totalsalary }}</td>
-  </tr>
  
+
+    <tr>
+      <td>1</td>
+      <td><b>Employee Name</b></td>
+      <td>{{ $details['0']['user']['name']}}</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td><b>Basic Salary</b></td>
+      <td>{{ $details['0']['user']['salary']}}</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td><b>Total Absent for This Month</b></td>
+      <td> {{ $absentcount}} </td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td><b>Month</b></td>
+      <td>{{ date('M Y',strtotime($details['0']->date)) }}</td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td><b>Salary This Month</b></td>
+      <td> {{ $totalsalary }} </td>
+    </tr>
+  
 </table>
 <br>
 <i style="font-size: 10px; float: right;">Print Data : {{ date("d M Y") }}</i>
@@ -102,11 +106,13 @@
 <hr style="border: dashed 2px; width: 95%; color:#000604; margin-bottom: 11px">
 
 <table id="customers">
+  
   <tr>
     <th width="10%">Sl No</th>
     <th width="45%">Employee Details</th>
     <th width="45%">Employee Data</th>
   </tr>
+
   <tr>
     <td>1</td>
     <td><b>Employee Name</b></td>
@@ -122,19 +128,19 @@
   <tr>
     <td>3</td>
     <td><b>Total Absent for This Month</b></td>
-    <td>{{ $absentcount}}</td>
+    <td> {{ $absentcount}} </td>
   </tr>
 
   <tr>
     <td>4</td>
     <td><b>Month</b></td>
-    <td>{{ date('M Y', strtotime($details['0']->date)) }}<td>
+    <td>{{ date('M Y',strtotime($details['0']->date)) }}</td>
   </tr>
 
   <tr>
     <td>5</td>
     <td><b>Salary This Month</b></td>
-    <td>{{ $totalsalary }}</td>
+    <td> {{ $totalsalary }} </td>
   </tr>
  
 </table>

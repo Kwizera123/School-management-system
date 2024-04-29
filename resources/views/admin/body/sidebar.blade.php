@@ -133,9 +133,10 @@
                 </a>
         <ul class="treeview-menu">
             <li class="{{ ($route == 'marks.entry.add')?'active' :'' }}"><a href="{{ route('marks.entry.add') }}"><i class="ti-more"></i>Marks Entry</a></li>
-             <li class="{{ ($route == 'marks.entry.edit')?'active' :'' }}"><a href="{{ route('marks.entry.edit') }}"><i class="ti-more"></i>Marks Edit</a></li>
-           {{-- <li><a href="{{ route('employee.leave.view') }}"><i class="ti-more"></i>Employee Leave</a></li>
-           <li><a href="{{ route('employee.attendance.view') }}"><i class="ti-more"></i>Employee Attendance</a></li>
+            <li class="{{ ($route == 'marks.entry.edit')?'active' :'' }}"><a href="{{ route('marks.entry.edit') }}"><i class="ti-more"></i>Marks Edit</a></li>
+             <li class="{{ ($route == 'marks.entry.grade')?'active' :'' }}" ><a href="{{ route('marks.entry.grade') }}"><i class="ti-more"></i>Marks Grade</a></li>
+
+           {{--  <li><a href="{{ route('employee.attendance.view') }}"><i class="ti-more"></i>Employee Attendance</a></li>
             <li><a href="{{ route('employee.monthly.salary') }}"><i class="ti-more"></i>Employee Monthly Salary</a></li>  --}}
 
         </ul>

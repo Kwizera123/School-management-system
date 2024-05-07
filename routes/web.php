@@ -31,6 +31,7 @@ use App\Http\Controllers\Backend\Marks\MarksController;
 use App\Http\Controllers\Backend\Marks\GradeController;
 
 use App\Http\Controllers\Backend\DefaultController;
+use App\Http\Controllers\Backend\account\StudentFeeController;
 
 
 
@@ -283,6 +284,23 @@ Route::prefix('marks')->group(function () {
 
 Route::get('marks/getsubject', [DefaultController::class, 'GetSubject'])->name('marks.getsubject');
 Route::get('student/marks/getstudents', [DefaultController::class, 'GetStudents'])->name('student.marks.getstudents');
+
+
+
+// Marks Management Routes
+
+Route::prefix('accounts')->group(function () {
+
+    Route::get('student/fee/view', [StudentFeeController::class, 'StudentFeeView'])->name('student.fee.view');
+    Route::get('student/fee/add', [StudentFeeController::class, 'StudentFeeAdd'])->name('student.fee.add');
+    Route::get('account/fee/getstudent', [StudentFeeController::class, 'StudentFeeGetStudent'])->name('account.fee.getstudent');
+    Route::post('account/fee/store', [StudentFeeController::class, 'StudentFeeStore'])->name('account.fee.store');
+
+    // Marks Entry Grade
+
+
+});
+
 
 
 }); //End of Middleware Auth Riute

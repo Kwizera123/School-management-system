@@ -149,9 +149,10 @@
         <ul class="treeview-menu">
             <li class="{{ ($route == 'student.fee.view')?'active' :'' }}"><a href="{{ route('student.fee.view') }}"><i class="ti-more"></i>Student Fee</a></li>
              <li class="{{ ($route == 'account.salary.view')?'active' :'' }}"><a href="{{ route('account.salary.view') }}"><i class="ti-more"></i>Employee Salary</a></li>
-         {{--    <li class="{{ ($route == 'marks.entry.grade')?'active' :'' }}" ><a href="{{ route('marks.entry.grade') }}"><i class="ti-more"></i>Marks Grade</a></li>
 
-            <li><a href="{{ route('employee.attendance.view') }}"><i class="ti-more"></i>Employee Attendance</a></li>
+        <li class="{{ ($route == 'other.cost.view')?'active' :'' }}" ><a href="{{ route('other.cost.view') }}"><i class="ti-more"></i>other cost</a></li>
+
+       {{--          <li><a href="{{ route('employee.attendance.view') }}"><i class="ti-more"></i>Employee Attendance</a></li>
             <li><a href="{{ route('employee.monthly.salary') }}"><i class="ti-more"></i>Employee Monthly Salary</a></li>  --}}
 
         </ul>

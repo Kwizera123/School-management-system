@@ -35,6 +35,8 @@ use App\Http\Controllers\Backend\account\StudentFeeController;
 use App\Http\Controllers\Backend\account\AccountSalaryController;
 use App\Http\Controllers\Backend\account\OtherCostController;
 
+use App\Http\Controllers\Backend\Report\ProfitController;
+
 
 
 /*
@@ -289,7 +291,7 @@ Route::get('student/marks/getstudents', [DefaultController::class, 'GetStudents'
 
 
 
-// Marks Management Routes
+// Account Management Routes
 
 Route::prefix('accounts')->group(function () {
 
@@ -312,6 +314,18 @@ Route::prefix('accounts')->group(function () {
     Route::post('other/cost/update/{id}', [OtherCostController::class, 'OtherCostUpdate'])->name('update.other.cost');
 
 });
+
+// Account Management Routes  
+
+Route::prefix('reports')->group(function () {
+
+    Route::get('monthly.profit.view', [ProfitController::class, 'MonthlyProfiteView'])->name('monthly.profit.view');
+    Route::get('monthly.profit.datewais', [ProfitController::class, 'MonthlyProfiteDatewais'])->name('report.profit.datewais.get');
+    Route::get('monthly.profit.pdf', [ProfitController::class, 'MonthlyProfitPdf'])->name('report.profit.pdf');
+
+
+});
+
 
 
 

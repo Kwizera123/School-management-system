@@ -152,29 +152,27 @@
 
         <li class="{{ ($route == 'other.cost.view')?'active' :'' }}" ><a href="{{ route('other.cost.view') }}"><i class="ti-more"></i>other cost</a></li>
 
-       {{--          <li><a href="{{ route('employee.attendance.view') }}"><i class="ti-more"></i>Employee Attendance</a></li>
-            <li><a href="{{ route('employee.monthly.salary') }}"><i class="ti-more"></i>Employee Monthly Salary</a></li>  --}}
-
         </ul>
             </li>
 
 
 
-            <li class="header nav-small-cap">User Interface</li>
+            <li class="header nav-small-cap">Report Interface</li>
 
-            <li class="treeview">
+            <li class="treeview {{ $prefix == '/reports' ? 'active' : '' }}">
                 <a href="#">
-                    <i data-feather="grid"></i>
-                    <span>Components</span>
+                    <i data-feather="mail"></i> <span>Reports Management</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a href="components_alerts.html"><i class="ti-more"></i>Alerts</a></li>
-                    <li><a href="components_badges.html"><i class="ti-more"></i>Badge</a></li>
-                </ul>
+        <ul class="treeview-menu">
+            <li class="{{ ($route == 'monthly.profit.view')?'active' :'' }}"><a href="{{ route('monthly.profit.view') }}"><i class="ti-more"></i>Monthly/Yearly Profit</a></li>
+
+
+        </ul>
             </li>
+
 
             <li>
                 <a href="{{ route('admin.logout') }}">

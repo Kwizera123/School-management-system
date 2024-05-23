@@ -52,7 +52,15 @@ class ProfitController extends Controller
        return response()->json(@$html);
     }
 
-    public function MonthlyProfitPdf(){
-        
+    public function MonthlyProfitPdf(Request $request){
+
+        $data['start_date'] = date('Y-m',strtotime($request->start_date));
+        $data['end_date'] = date('Y-m',strtotime($request->end_date));
+        $data['sdate'] = date('Y-m-d',strtotime($request->start_date));
+        $data['edate'] = date('Y-m-d',strtotime($request->end_date));
+
+        $pdf = PDF::loadView('backend.report.profit.profit_pdf', $data);
+        $pdf->SetProtection(['copy', 'print'], '', 'pass');
+        return $pdf->stream('document.pdf');
     }
 }

@@ -36,6 +36,7 @@ use App\Http\Controllers\Backend\account\AccountSalaryController;
 use App\Http\Controllers\Backend\account\OtherCostController;
 
 use App\Http\Controllers\Backend\Report\ProfitController;
+use App\Http\Controllers\Backend\Report\MarkSheetController;
 
 
 
@@ -323,7 +324,9 @@ Route::prefix('reports')->group(function () {
     Route::get('monthly.profit.datewais', [ProfitController::class, 'MonthlyProfiteDatewais'])->name('report.profit.datewais.get');
     Route::get('monthly.profit.pdf', [ProfitController::class, 'MonthlyProfitPdf'])->name('report.profit.pdf');
 
-
+    // MarkSheet Generate Routes
+    Route::get('marksheet.generate.view', [MarkSheetController::class, 'MarkSheetView'])->name('marksheet.generate.view');
+    Route::get('marksheet.generate.get', [MarkSheetController::class, 'MarkSheetGet'])->name('report.marksheet.get');
 });
 
 
